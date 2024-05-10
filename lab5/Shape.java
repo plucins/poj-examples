@@ -1,6 +1,9 @@
+package lab5;
+
 public class Shape {
     protected int a;
     protected int b;
+
     protected String name;
 
     public Shape(int a) {
@@ -12,19 +15,15 @@ public class Shape {
         this.b = b;
     }
 
-    public String getName() {
+    public String getName(){
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int area() {
+    public int area(){
         return a*b;
     }
 
-    public int perimeter() {
+    public int perimeter(){
         return a+b;
     }
 }

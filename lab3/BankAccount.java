@@ -1,38 +1,41 @@
-public class BankAccount {
-    long accountNumber;
-    int balance;
-
-    public BankAccount(long accountNumber, int balance){
-        this.accountNumber = accountNumber;
-        this.balance = balance;
-    }
-
-    public void displayBalance(){
-        System.out.println("Stan konta to: " + balance);
-    }
-
-    public void depositFunds(int amount){
-        balance += amount;
-        System.out.println("Wpłacam na konto " + amount);
-    }
-
-    public void withdrawFunds(int amount){
-        if (balance >= amount) {
-            balance -= amount;
-            System.out.println("Wyplacam z konta " + amount);
-        }
-        else {
-            System.out.println("Sorki już nie ma keszu. Stan konta to " + balance + " a próbujesz wyplacic " + amount);
-        }
-    }
-
-    public void transferFunds(int amount, Person person){
-        balance -= amount;
-        person.bankAccount.depositFunds(amount);
-    }
-
-
-
-
-
-}
+//package lab3;
+//
+//import lab3.Owner;
+//
+//public class BankAccount {
+//    private double saldo;
+//    private Owner owner;
+//
+//    public BankAccount(Owner owner){
+//        this.saldo = 0;
+//        this.owner = owner;
+//    }
+//
+//    public void showBalance(){
+//        System.out.println(this.owner.returnOwnerInfo() + " saldo = " + this.saldo);
+//    }
+//
+//    public void deposit(double amount){
+//        this.saldo = this.saldo + amount;
+//    }
+//
+//    public double withdraw(double amount){
+//        if (this.saldo >= amount) {
+//            this.saldo -= amount;
+//            return amount;
+//        }
+//        else {
+//            System.out.println("Brak środków na koncie");
+//            return 0;
+//        }
+//
+//    }
+//
+//    public void transferTo(BankAccount bankAccount, double amount){
+//        if(this.withdraw(amount) > 0){
+//            bankAccount.saldo = bankAccount.saldo + amount;
+//        }
+//    }
+//
+//
+//}

@@ -1,4 +1,6 @@
-public class Triangle extends Shape {
+package lab5;
+
+public class Triangle extends Shape{
     private int c;
     private int h;
 
@@ -6,16 +8,15 @@ public class Triangle extends Shape {
         super(a, b);
         this.c = c;
         this.h = h;
-        this.name = "Trojkat";
+        this.name = "Trójkąt";
+    }
+    @Override
+    public int area(){
+        return (a*h)/2;
     }
 
-    @Override
-    public int area() {
-        return a * h / 2;
+    public int perimeter(){
+        return a+b+c;
     }
 
-    @Override
-    public int perimeter() {
-        return a + b + c;
-    }
 }
